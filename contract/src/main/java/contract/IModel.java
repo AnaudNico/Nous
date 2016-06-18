@@ -14,7 +14,7 @@ public interface IModel {
 	 *
 	 * @return the message
 	 */
-	String getMessage();
+	String getMap();
 
 	/**
 	 * Load the message.
@@ -22,7 +22,7 @@ public interface IModel {
 	 * @param key
 	 *          the key
 	 */
-	void loadMessage(String key);
+	void loadMap(int level);
 
 	/**
 	 * Gets the observable.
@@ -30,4 +30,12 @@ public interface IModel {
 	 * @return the observable
 	 */
 	Observable getObservable();
+	
+	public ArrayList<IElement> getElementsList();
+	void Down();
+	void Up();
+	void Right();
+	void Left();
+	void modifyArray();
+	int getLevel();
 }
